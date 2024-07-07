@@ -7,12 +7,12 @@
       type: Object as PropType<Camera>,
       required: true
     }
-  })
+  });
 </script>
 
 <template>
   <div class="camera-container">
-  <img :src="camera.sd.src" :alt="camera.name" style="width: 100%;height: auto;" loading="lazy"/>
+    <img :src="camera.sd.src" :alt="camera.name" style="width: 100%;height: auto;" loading="lazy">
   </div>
 </template>
 

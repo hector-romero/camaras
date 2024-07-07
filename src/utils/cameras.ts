@@ -20,7 +20,7 @@ const get_src = (id: number, width: number, height: number): CameraSRC => {
         src: `${config.ZONEMINDER_HOST}/cgi-bin/nph-zms?monitor=${id}&method=mpeg&scale=100&${url_params.toString()}` ,
         w: width,
         h: height
-    }
+    };
 };
 
 

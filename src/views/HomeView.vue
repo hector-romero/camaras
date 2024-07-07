@@ -7,7 +7,7 @@ console.log("cameras", cameras);
 
 <template>
   <main>
-    <CameraItem v-for="(camera, index) in cameras" :camera="camera" :key="index"/>
+    <CameraItem v-for="(camera, index) in cameras" :key="index" :camera="camera" />
   </main>
 </template>
 
