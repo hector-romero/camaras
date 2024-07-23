@@ -1,29 +1,37 @@
 <script setup lang="ts">
   import type {PropType} from "vue";
-  import type {Camera} from "@/utils/cameras";
+  import type {Camera} from "@/config/cameras";
 
   defineProps({
     camera: {
       type: Object as PropType<Camera>,
       required: true
+    },
+    index: {
+      type: Number,
+      default: 0
     }
   });
 </script>
 
 <template>
-  <div class="camera-container">
+  <RouterLink class="camera-container" replace :to="{name: 'gallery', query: {cameraIndex: index}}">
     <img :src="camera.sd.src" :alt="camera.name" style="width: 100%;height: auto;" loading="lazy">
-  </div>
+  </RouterLink>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .camera-container {
-  width: 50%;
+  float: left;
+  width: 100%;
+  //display: inline;
+  display: block;
+  line-height: 0;
 }
 
-@media screen and (max-width: 1200px)  {
+@media screen and (min-width: 1200px)  {
   .camera-container {
-    width: 100%;
+    width: 50%;
   }
 }
 </style>

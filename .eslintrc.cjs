@@ -14,7 +14,8 @@ module.exports = {
   rules: {
     semi: 'error',
     'prefer-const': 'error',
-    'vue/max-attributes-per-line': 'off'
+    'vue/max-attributes-per-line': 'off',
+    'vue/singleline-html-element-content-newline': 'off'
 
   },
   overrides: [

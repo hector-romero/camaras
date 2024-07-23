@@ -4,29 +4,35 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <RouterView />
+  <router-view v-slot="{ Component, route }">
+    <transition :name="route.meta.transition || 'fade'" mode="in-out">
+      <div :key="route.path" class="page">
+        <component :is="Component" />
+      </div>
+    </transition>
+  </router-view>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style scoped lang="scss">
+.page {
+  background-color: #181818;
+  position: fixed;
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  overflow: auto;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.fade-enter-active, .fade-leave-active {
+  transition: transform .3s ease-in-out, opacity .3s;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+  z-index: -1;
 }
 
-nav a:first-of-type {
-  border: 0;
-}
 </style>

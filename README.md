@@ -1,6 +1,8 @@
-# camaras
+# Camaras
 
-This template should help get you started developing with Vue 3 in Vite.
+**Camaras** is an interface for showing a montage of [https://zoneminder.com/](Zoneminder) monitors, where each monitor
+represents one of the hd or sd streams of a camera.
+
 
 ## Recommended IDE Setup
 

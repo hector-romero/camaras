@@ -1,20 +1,14 @@
 <script setup lang="ts">
-import cameras from "@/utils/cameras";
+import cameras from "@/config/cameras";
 import CameraItem from "@/components/CameraItem.vue";
 
-console.log("cameras", cameras);
+
 </script>
 
 <template>
   <main>
-    <CameraItem v-for="(camera, index) in cameras" :key="index" :camera="camera" />
+    <CameraItem v-for="(camera, index) in cameras" :key="index" :camera="camera" :index="index" />
   </main>
 </template>
 
-<style scoped lang="scss">
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-</style>
+<style scoped lang="scss"></style>
