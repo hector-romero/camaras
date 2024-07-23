@@ -30,3 +30,8 @@ coverage
 *.tsbuildinfo
 
 original
+
+# Zip file with build output
+dist.zip
+# Private, for now
+deploy.sh

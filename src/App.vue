@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router';
 
 <template>
   <router-view v-slot="{ Component, route }">
-    <transition :name="route.meta.transition || 'fade'" mode="in-out">
+    <transition name="fade" mode="in-out">
       <div :key="route.path" class="page">
         <component :is="Component" />
       </div>

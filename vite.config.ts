@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue';
 import vueDevTools from 'vite-plugin-vue-devtools';
 import fs from "fs";
 import {ServerOptions as HttpsServerOptions} from "https";
+import zipPack from "vite-plugin-zip-pack";
 
 const env = loadEnv('all', process.cwd(), ['']);
 
@@ -26,6 +27,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    zipPack({outDir: '.'}),
   ],
   resolve: {
     alias: {
