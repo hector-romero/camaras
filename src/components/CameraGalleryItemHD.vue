@@ -38,7 +38,7 @@ const cycleZoom = () => {
 </template>
 
 <style scoped lang="scss">
-@import "../assets/_mixins.scss";
+@use "../assets/_mixins.scss" as *;
 .hd-img {
   object-fit: contain;
   width: 100%;

@@ -18,7 +18,7 @@ import Vue3PullToRefresh from '@amirafa/vue3-pull-to-refresh';
 </template>
 
 <style scoped lang="scss">
-@import "./assets/_mixins.scss";
+@use "./assets/_mixins.scss" as *;
 .page {
   background-color: #181818;
   position: fixed;

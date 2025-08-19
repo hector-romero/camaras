@@ -27,7 +27,7 @@ const cancelTouchEvents = (e: TouchEvent) => {
 </template>
 
 <style scoped lang="scss">
-@import "../assets/_mixins.scss";
+@use "../assets/_mixins.scss" as *;
 .sd-img {
   object-fit: contain;
   object-position: center;

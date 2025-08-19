@@ -37,7 +37,7 @@ const showThumbnails = ref(true);
 </template>
 
 <style scoped lang="scss">
-@import "../assets/_mixins.scss";
+@use "../assets/_mixins.scss" as *;
 main {
   display: flex;
   @include dynamic-height(100);
