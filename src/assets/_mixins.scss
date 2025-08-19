@@ -1,0 +1,29 @@
+@mixin dynamic-height($height) {
+  height: $height * 1vh;
+  height: $height * 1dvh;
+}
+
+@mixin dynamic-min-height($height) {
+  min-height: $height * 1vh;
+  min-height: $height * 1dvh;
+}
+
+@mixin dynamic-max-height($height) {
+  max-height: $height * 1vh;
+  max-height: $height * 1dvh;
+}
+
+@mixin dynamic-width($width) {
+  width: $width * 1vw;
+  width: $width * 1dvw;
+}
+
+@mixin dynamic-min-width($width) {
+  min-width: $width * 1vw;
+  min-width: $width * 1dvw;
+}
+
+@mixin dynamic-max-width($width) {
+  max-width: $width * 1vw;
+  max-width: $width * 1dvw;
+}

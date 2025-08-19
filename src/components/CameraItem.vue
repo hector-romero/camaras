@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type {PropType} from "vue";
+import {getCurrentInstance, type PropType} from "vue";
   import type {Camera} from "@/config/cameras";
 
   defineProps({
@@ -12,6 +12,7 @@
       default: 0
     }
   });
+
 </script>
 
 <template>

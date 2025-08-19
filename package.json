@@ -15,6 +15,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore"
   },
   "dependencies": {
+    "@amirafa/vue3-pull-to-refresh": "^1.2.7",
     "@primevue/themes": "^4.0.0",
     "pinia": "^2.1.7",
     "primeicons": "^7.0.0",

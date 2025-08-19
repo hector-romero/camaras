@@ -1,5 +1,7 @@
 import {config} from "@/config";
 
+const con_key = Math.floor(Math.random() * 1000000);
+
 interface CameraSRC {
     src: string,
     w: number,
@@ -17,7 +19,7 @@ const get_src = (id: number, width: number, height: number): CameraSRC => {
     // TODO use pinia
     const url_params = new URLSearchParams(window.location.search);
     return {
-        src: `${config.ZONEMINDER_HOST}/cgi-bin/nph-zms?monitor=${id}&method=mpeg&scale=100&${url_params.toString()}` ,
+        src: `${config.ZONEMINDER_HOST}/zm/cgi-bin/nph-zms?monitor=${id}&method=mpeg&scale=100&${url_params.toString()}&connkey=${con_key}${id}` ,
         w: width,
         h: height
     };

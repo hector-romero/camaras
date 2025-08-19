@@ -27,7 +27,8 @@ router.beforeEach(() => {
   // Triggers window stop to cancel all of the active streams
   // otherwise, they will keep running in background, consuming huge amounts of data
   window.stop();
-
+  console.log("HERE");
 });
 
 export default router;
+

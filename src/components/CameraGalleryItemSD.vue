@@ -27,11 +27,11 @@ const cancelTouchEvents = (e: TouchEvent) => {
 </template>
 
 <style scoped lang="scss">
+@import "../assets/_mixins.scss";
 .sd-img {
   object-fit: contain;
   object-position: center;
-  max-height: calc(20vh );
-  max-height: calc(20dvh);
+  @include dynamic-max-height(20);
   width: 100%;
   height: 100%;
 }

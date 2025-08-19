@@ -32,28 +32,35 @@ const cycleZoom = () => {
 </script>
 
 <template>
-  <img ref="img" :src="camera.hd.src" :alt="camera.name" class="hd-img" :class="[zoomStatus]" @dblclick="cycleZoom">
+  <div class="img-container" :class="[zoomStatus]" @dblclick="cycleZoom">
+    <img ref="img" :src="camera.hd.src" :alt="camera.name" class="hd-img">
+  </div>
 </template>
 
 <style scoped lang="scss">
+@import "../assets/_mixins.scss";
 .hd-img {
   object-fit: contain;
   width: 100%;
-  height: 80vh;
-  height: 80dvh;
-  min-height: 80vh;
-  min-height: 80dvh;
+  @include dynamic-height(80);
+  @include dynamic-min-height(80);
+}
 
-  &.full-width {
-    width: 100vw;
-    width: 100dvw;
-    height: auto;
+.img-container {
+  overflow: scroll;
+  &.full-height, &.full-width {
+    text-align: center;
+    @include dynamic-width(100);
+    @include dynamic-height(100);
+  }
+  &.full-width .hd-img {
+      width: 100%;
+      height: auto;
   }
 
-  &.full-height {
-    height: 100vh;
-    height: 100dvh;
-    width: auto;
+  &.full-height .hd-img {
+      height: 100%;
+      width: auto;
   }
 }
 </style>

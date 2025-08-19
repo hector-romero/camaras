@@ -37,10 +37,10 @@ const showThumbnails = ref(true);
 </template>
 
 <style scoped lang="scss">
+@import "../assets/_mixins.scss";
 main {
   display: flex;
-  height: 100vh;
-  height: 100dvh;
+  @include dynamic-height(100);
   align-content: center;
   align-items: center;
   justify-content: center;

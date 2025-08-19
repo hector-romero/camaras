@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+import Vue3PullToRefresh from '@amirafa/vue3-pull-to-refresh';
 
 </script>
 
@@ -11,16 +12,18 @@ import { RouterView } from 'vue-router';
       </div>
     </transition>
   </router-view>
+  <Vue3PullToRefresh
+    :distance="50" :duration="2000" :size="32" :options="{ color: '#111', bgColor: '#fff' }"
+  />
 </template>
 
 <style scoped lang="scss">
+@import "./assets/_mixins.scss";
 .page {
   background-color: #181818;
   position: fixed;
-  width: 100vw;
-  width: 100dvw;
-  height: 100vh;
-  height: 100dvh;
+  @include dynamic-height(100);
+  @include dynamic-width(100);
   top: 0;
   left: 0;
   overflow: auto;
