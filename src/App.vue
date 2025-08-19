@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+//@ts-ignore
 import Vue3PullToRefresh from '@amirafa/vue3-pull-to-refresh';
 
 </script>
