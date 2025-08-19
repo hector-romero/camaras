@@ -14,7 +14,7 @@ import Vue3PullToRefresh from '@amirafa/vue3-pull-to-refresh';
     </transition>
   </router-view>
   <Vue3PullToRefresh
-    :distance="50" :duration="2000" :size="32" :options="{ color: '#111', bgColor: '#fff' }"
+    :distance="32" :duration="100" :size="32" :options="{ color: '#424040', bgColor: 'rgba(251,251,251,0.50)' }"
   />
 </template>
 
